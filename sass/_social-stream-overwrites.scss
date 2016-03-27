@@ -1,0 +1,33 @@
+div.dcwss-content {
+  ul.stream {
+    -webkit-column-count: 4;
+     -moz-column-count: 4;
+          column-count: 4;
+    .dcsns-li {
+      // width: 250px;
+      position: static !important;
+      div.inner {
+        width: 100%;
+        span.section-text {
+          display: block;
+          white-space: normal;
+        }
+        span.section-thumb {
+          display: block;
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      &.dcsns-twitter {
+
+      }
+      &.dcsns-flickr {
+
+      }
+
+    }
+  }
+}
