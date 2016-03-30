@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-	<div class="hero-image">
+	<div class="the-big-picture">
 		<span>lego pic here</span>
 	</div>
 

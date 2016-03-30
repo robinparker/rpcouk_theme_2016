@@ -9,3 +9,11 @@
     margin-top: 0;
   }
 }
+
+.the-big-picture {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: url('assets/imgs/hero-img_lrg.jpg');
+  background-size: cover;
+}
