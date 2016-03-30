@@ -1,3 +1,11 @@
+.header-wrapper {
+  background: $rp-red;
+}
+
 .site-header {
   @include outer-container();
+  color: #fff;
+  h1, p {
+    margin-top: 0;
+  }
 }
