@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Ziggurat';
+    src: url('assets/fonts/ziggurat-htf-black-webfont.eot');
+    src: url('assets/fonts/ziggurat-htf-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/ziggurat-htf-black-webfont.woff') format('woff'),
+         url('assets/fonts/ziggurat-htf-black-webfont.ttf') format('truetype'),
+         url('assets/fonts/ziggurat-htf-black-webfont.svg#ZigguratHTFBlackRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* font-family: 'Ziggurat', Georgia, "Times New Roman", Times, serif; */
+
+body {
+  font-family: "proxima-nova",sans-serif;  
+}
+
+h2 {
+  font-family: "clarendon-urw",serif;
+  font-weight: 700;
+  font-size: rem(24);
+  color: $rp-red;
+}
+
+p {
+  font-size: rem(16);
+}
+
+.wf-loading {
+  visibility: hidden;
+}

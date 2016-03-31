@@ -16,7 +16,9 @@
 get_header(); ?>
 
 	<div class="the-big-picture">
-		<span>lego pic here</span>
+		<header>
+			<h1>I'm Robin Parker, UI Developer<span>and I like to build stuff</h1>
+		</header>
 	</div>
 
 		<main id="main" class="site-main" role="main">
@@ -26,7 +28,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+				the_content();
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -42,5 +44,4 @@ get_header(); ?>
 
 
 <?php
-get_sidebar();
 get_footer();

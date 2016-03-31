@@ -1,23 +1,60 @@
 .header-wrapper {
   background: $rp-red;
   position: fixed;
+  top: 0;
   z-index: 99;
   width: 100%;
 }
 
 .site-header {
   @include outer-container();
+  height: 80px;
   color: #fff;
-  h1, p {
-    margin-top: 0;
+  .logo {
+    float: left;
+    position: relative;
+    width: rem(65);
+    height: rem(65);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    text-decoration: none;
+    span {
+      font-family: 'Ziggurat', Georgia, "Times New Roman", Times, serif;
+      font-style: italic;
+      font-size: rem(30);
+      text-decoration: none;
+      color: $rp-red;
+    }
   }
 }
 
 .the-big-picture {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 80px);
   background: url('assets/imgs/hero-img_lrg.jpg');
   background-size: cover;
+  position: relative;
+  margin-top: 80px;
+  header {
+    @include outer-container();
+    position: relative;
+  }
+  h1 {
+    position: absolute;
+    right: 0;
+    top: rem(30);
+    font-family: 'Ziggurat', Georgia, "Times New Roman", Times, serif;
+    font-size: rem(40);
+    color: $rp-red;
+    text-align: right;
+    span {
+      display: block;
+      font-size: rem(30);
+      font-style: italic;
+    }
+  }
 }
 
 .site-main {
@@ -26,4 +63,5 @@
 
 .about-me {
   @include span-columns(8);
+  margin-top: 3rem;
 }
