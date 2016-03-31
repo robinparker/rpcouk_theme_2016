@@ -1,5 +1,8 @@
 .header-wrapper {
   background: $rp-red;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
 }
 
 .site-header {
@@ -13,7 +16,14 @@
 .the-big-picture {
   width: 100%;
   height: 100vh;
-  position: fixed;
   background: url('assets/imgs/hero-img_lrg.jpg');
   background-size: cover;
+}
+
+.site-main {
+  @include outer-container();
+}
+
+.about-me {
+  @include span-columns(8);
 }

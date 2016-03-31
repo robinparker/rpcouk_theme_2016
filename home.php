@@ -19,9 +19,10 @@ get_header(); ?>
 		<span>lego pic here</span>
 	</div>
 
-	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<section class="about-me">
+			<h2> About me</h2>
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -34,9 +35,11 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
+		</section>
+
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+
 
 <?php
 get_sidebar();
