@@ -1,0 +1,47 @@
+.header-wrapper {
+  background: $rp-red;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.site-header {
+  @include outer-container();
+  height: 95px;
+  color: #fff;
+  .logo {
+    float: left;
+    position: relative;
+    top: 10px;
+    width: rem(75);
+    height: rem(75);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    text-decoration: none;
+    span {
+      position: absolute;
+      top: .8rem;
+      right: 0;
+      font-family: 'Ziggurat', Georgia, "Times New Roman", Times, serif;
+      font-style: italic;
+      font-size: rem(35);
+      text-decoration: none;
+      color: $rp-red;
+    }
+  }
+  .main-navigation {
+    float: right;
+    ul {
+      li {
+        list-style-type: none;
+        display: inline-block;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

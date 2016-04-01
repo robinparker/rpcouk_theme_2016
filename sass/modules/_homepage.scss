@@ -1,35 +1,3 @@
-.header-wrapper {
-  background: $rp-red;
-  position: fixed;
-  top: 0;
-  z-index: 99;
-  width: 100%;
-}
-
-.site-header {
-  @include outer-container();
-  height: 80px;
-  color: #fff;
-  .logo {
-    float: left;
-    position: relative;
-    width: rem(65);
-    height: rem(65);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background: #fff;
-    text-decoration: none;
-    span {
-      font-family: 'Ziggurat', Georgia, "Times New Roman", Times, serif;
-      font-style: italic;
-      font-size: rem(30);
-      text-decoration: none;
-      color: $rp-red;
-    }
-  }
-}
-
 .the-big-picture {
   width: 100%;
   height: calc(100vh - 80px);

@@ -39,6 +39,30 @@ get_header(); ?>
 			?>
 		</section>
 
+		<?php
+		$args = array( 'post_type' => 'project', 'posts_per_page' => 3 );
+		$loop = new WP_Query( $args );
+		while ( $loop->have_posts() ) : $loop->the_post();
+		  the_title();
+			?>
+			<img src="<?php the_field('main_image'); ?>" />
+			<?php
+		  echo '<div class="entry-content">';
+		  the_content();
+		  echo '</div>';
+		endwhile;
+		?>
+
+		<?php
+		$args = array( 'post_type' => 'post', 'posts_per_page' => 3 );
+		$loop = new WP_Query( $args );
+		while ( $loop->have_posts() ) : $loop->the_post();
+		  the_title();
+		  echo '<div class="entry-content">';
+		  the_content();
+		  echo '</div>';
+		endwhile;
+		?>
 
 		</main><!-- #main -->
 
