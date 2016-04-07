@@ -39,7 +39,7 @@
 	<header id="masthead" class="site-header" role="banner">
 			<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span>RP</span></a>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 </div>

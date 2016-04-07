@@ -1,10 +1,10 @@
 .the-big-picture {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 110px);
   background: url('assets/imgs/hero-img_lrg.jpg');
   background-size: cover;
   position: relative;
-  margin-top: 80px;
+  margin-top: 110px;
   header {
     @include outer-container();
     position: relative;
@@ -26,10 +26,36 @@
 }
 
 .site-main {
-  @include outer-container();
+  // @include outer-container();
 }
 
 .about-me {
+  @include outer-container();
+  section {
   @include span-columns(8);
-  margin-top: 3rem;
+  }
+  margin-top: 4rem;
+}
+
+.work-three {
+  width: 100%;
+  margin-top: 4rem;
+  .work-three--item {
+    float: left;
+    width: 100%;
+    @include media($tablet) {
+      width: 33.3333%;
+    }
+  }
+}
+
+.title-block {
+  @include outer-container();
+  h2 {
+    background: $rp-red;
+    color: #fff;
+    display: inline-block;
+    padding: .33rem 1rem;
+    line-height: 1.5;
+  }
 }

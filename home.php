@@ -23,7 +23,8 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 
-			<section class="about-me">
+			<div class="about-me">
+				<section>
 			<h2> About me</h2>
 			<?php
 			while ( have_posts() ) : the_post();
@@ -38,21 +39,37 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 		</section>
+		</div>
 
+		<div class="work-three">
+			<div class="title-block">
+				<h2>My work</h2>
+			</div>
 		<?php
 		$args = array( 'post_type' => 'project', 'posts_per_page' => 3 );
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
+			echo '<div class="work-three--item">';
 		  the_title();
 			?>
-			<img src="<?php the_field('main_image'); ?>" />
+			<!-- <img src="<?php the_field('main_image'); ?>" /> -->
 			<?php
+			the_post_thumbnail();
 		  echo '<div class="entry-content">';
 		  the_content();
+			the_permalink();
 		  echo '</div>';
+			echo '</div>';
 		endwhile;
-		?>
 
+		?>
+	</div>
+
+
+	<div class="blog-three">
+		<div class="title-block">
+			<h2>Blog</h2>
+		</div>
 		<?php
 		$args = array( 'post_type' => 'post', 'posts_per_page' => 3 );
 		$loop = new WP_Query( $args );
@@ -63,6 +80,8 @@ get_header(); ?>
 		  echo '</div>';
 		endwhile;
 		?>
+
+	</div>
 
 		</main><!-- #main -->
 

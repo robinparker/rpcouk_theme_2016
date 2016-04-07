@@ -8,12 +8,13 @@
 
 .site-header {
   @include outer-container();
-  height: 95px;
+  position: relative;
+  height: 110px;
   color: #fff;
   .logo {
     float: left;
     position: relative;
-    top: 10px;
+    top: 18px;
     width: rem(75);
     height: rem(75);
     -webkit-border-radius: 50%;
@@ -33,11 +34,17 @@
     }
   }
   .main-navigation {
-    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
     ul {
       li {
         list-style-type: none;
         display: inline-block;
+        margin-right: 2rem;
+        &:last-child {
+          margin-right: 0;
+        }
         a {
           color: #fff;
         }
