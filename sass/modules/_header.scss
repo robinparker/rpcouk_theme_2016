@@ -47,6 +47,11 @@
         }
         a {
           color: #fff;
+          font-size: rem(18);
+          text-decoration: none;
+          &:hover, &:focus {
+            text-decoration: underline;
+          }
         }
       }
     }

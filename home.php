@@ -41,7 +41,7 @@ get_header(); ?>
 		</section>
 		</div>
 
-		<div class="work-three">
+		<div class="work-three full-width">
 			<div class="title-block">
 				<h2>My work</h2>
 			</div>
@@ -49,17 +49,17 @@ get_header(); ?>
 		$args = array( 'post_type' => 'project', 'posts_per_page' => 3 );
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
-			echo '<div class="work-three--item">';
-		  the_title();
+			echo '<a class="work-three--item fw-3-col" href="' .get_permalink() .'">';
+		  // the_title();
 			?>
 			<!-- <img src="<?php the_field('main_image'); ?>" /> -->
 			<?php
 			the_post_thumbnail();
-		  echo '<div class="entry-content">';
-		  the_content();
-			the_permalink();
-		  echo '</div>';
-			echo '</div>';
+		  // echo '<div class="entry-content">';
+		  // the_content();
+			// the_permalink();
+		  // echo '</div>';
+			echo '</a>';
 		endwhile;
 
 		?>
@@ -74,10 +74,13 @@ get_header(); ?>
 		$args = array( 'post_type' => 'post', 'posts_per_page' => 3 );
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
-		  the_title();
-		  echo '<div class="entry-content">';
-		  the_content();
-		  echo '</div>';
+		echo '<a class="blog-three--item fw-3-col" href="' .get_permalink() .'">';
+		  // the_title();
+			the_post_thumbnail();
+		  // echo '<div class="entry-content">';
+		  // the_content();
+		  // echo '</div>';
+			echo '</a>';
 		endwhile;
 		?>
 
