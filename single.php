@@ -14,6 +14,11 @@ get_header(); ?>
 
 		<?php
 		while ( have_posts() ) : the_post();
+		
+			if(get_field('image_1'))
+			{
+				echo '<p>' . get_field('image_1') . '</p>';
+			}		
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
