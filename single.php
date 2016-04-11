@@ -18,6 +18,9 @@ get_header(); ?>
 			if(get_field('image_1'))
 			{
 				echo '<p>' . get_field('image_1') . '</p>';
+				?>
+				<!-- <img src="<?php the_field('image_1'); ?>" alt="" /> -->
+				<?php				
 			}		
 
 			get_template_part( 'template-parts/content', get_post_format() );
