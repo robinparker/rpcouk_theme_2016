@@ -15,7 +15,6 @@
 
 get_header(); ?>
 
-
 		<main id="main" class="site-main" role="main">
 
 			<section>
@@ -23,12 +22,18 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
+			if(get_field('image_1'))
+			{
+				// echo '<p>' . get_field('image_1') . '</p>';
+				?>
+				<img src="<?php the_field('image_1'); ?>" alt="" />
+				<img src="<?php the_field('image_2'); ?>" alt="" />
+				<img src="<?php the_field('image_3'); ?>" alt="" />
+				<?php
+			}
+
 				the_content();
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
 
 			endwhile; // End of the loop.
 			?>
