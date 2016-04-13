@@ -3,6 +3,7 @@ body.single {
   .project-heading {
     overflow: hidden;
     margin-top: -2rem;
+    padding: 1rem;
     position: relative;
     z-index: 99;
     background: $rp-red;
@@ -10,9 +11,12 @@ body.single {
     h2 {
       color: #fff;
       float: left;
+      margin: 0;
+      line-height: 1;
     }
     ul {
       float: right;
+      margin: 0;
     }
     li {
       list-style-type: none;

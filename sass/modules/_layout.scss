@@ -32,7 +32,7 @@
   h2 {
     @include outer-container();
     color: #fff;
-    margin: 0;
-    padding: 1rem 0;
+    margin: 0 auto;
+    padding: .5rem 0;
   }
 }

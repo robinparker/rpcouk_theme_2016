@@ -1,0 +1,8 @@
+.site-footer {
+  background: $rp-blue;
+  color: #fff;
+  padding: 1rem 0;
+  > div {
+    @include outer-container();
+  }
+}
