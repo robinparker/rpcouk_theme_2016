@@ -41,7 +41,7 @@ get_header(); ?>
 		</section>
 		</div>
 
-		<div class="work-three full-width">
+		<div class="full-width-3 work">
 			<div class="title-block">
 				<h2>My work</h2>
 			</div>
@@ -66,7 +66,7 @@ get_header(); ?>
 	</div>
 
 
-	<div class="blog-three">
+	<div class="full-width-3 blog">
 		<div class="title-block">
 			<h2>Blog</h2>
 		</div>

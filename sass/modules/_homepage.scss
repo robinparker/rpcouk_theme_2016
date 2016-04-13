@@ -36,37 +36,3 @@
   }
   margin-top: 4rem;
 }
-
-.work-three {
-  @include clearfix;
-  width: 100%;
-  margin-top: 4rem;
-  overflow: hidden;
-}
-
-.blog-three {
-  @include clearfix;
-  width: 100%;
-  margin-top: 4rem;
-  overflow: hidden;
-}
-
-.fw-3-col {
-  float: left;
-  width: 100%;
-  position: relative;
-  @include media($tablet) {
-    width: 33.3333%;
-  }
-}
-
-.title-block {
-  @include outer-container();
-  h2 {
-    background: $rp-red;
-    color: #fff;
-    display: inline-block;
-    padding: .33rem 1rem;
-    line-height: 1.5;
-  }
-}

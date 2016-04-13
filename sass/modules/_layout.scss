@@ -1,0 +1,38 @@
+.full-width-3 {
+  @include clearfix;
+  width: 100%;
+  margin-top: 4rem;
+  overflow: hidden;
+  &.project {
+    margin-top: 0;
+  }
+  .title-block {
+    @include outer-container();
+    h2 {
+      background: $rp-red;
+      color: #fff;
+      display: inline-block;
+      padding: .33rem 1rem;
+      line-height: 1.5;
+    }
+  }
+  .fw-3-col {
+    float: left;
+    width: 100%;
+    position: relative;
+    @include media($tablet) {
+      width: 33.3333%;
+    }
+  }
+}
+
+.section-heading {
+  width: 100%;
+  background: $rp-blue;
+  h2 {
+    @include outer-container();
+    color: #fff;
+    margin: 0;
+    padding: 1rem 0;
+  }
+}
