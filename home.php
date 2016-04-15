@@ -59,7 +59,11 @@ get_header(); ?>
 	</div>
 
 	<div class="row">
-		<a href="my-work" class="ghost-btn">See more of my work</a>
+		<a href="my-work" class="ghost-btn">See more of my work
+			<svg role="img">
+  			<use xlink:href="#chevronright"></use>
+			</svg>
+		</a>
 	</div>
 
 
@@ -75,7 +79,7 @@ get_header(); ?>
 		  // the_title();
 			the_post_thumbnail();
 		  // echo '<div class="entry-content">';
-		  the_content();
+		  // the_content();
 		  // echo '</div>';
 			echo '</a>';
 		endwhile;
@@ -84,7 +88,11 @@ get_header(); ?>
 	</div>
 
 	<div class="row">
-		<a href="blog" class="ghost-btn">See all blog posts</a>
+		<a href="blog" class="ghost-btn">See all blog posts
+			<svg role="img">
+  			<use xlink:href="#chevronright"></use>
+			</svg>
+		</a>
 	</div>
 
 

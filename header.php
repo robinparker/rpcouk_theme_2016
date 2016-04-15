@@ -33,6 +33,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+  <?php include("assets/svg-symbols.svg"); ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'rpcouk' ); ?></a>
 
 <div class="header-wrapper">

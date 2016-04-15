@@ -40,13 +40,25 @@
 
 .ghost-btn {
   display: inline-block;
+  position: relative;
   margin-top: 1rem;
-  padding: .1rem 1.5rem;
+  padding: .75rem 2.5rem .75rem 1.5rem;
   color: $rp-blue;
   border: 1px solid;
   text-decoration: none;
+  svg {
+    position: absolute;
+    top: .65rem;
+    right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: $rp-blue;
+  }
   &:hover, &:focus {
     background: $rp-blue;
     color: #fff;
+    svg {
+      fill: #fff;
+    }
   }
 }

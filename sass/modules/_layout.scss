@@ -1,3 +1,7 @@
+body > svg {
+  position: absolute;
+}
+
 .row {
   @include outer-container();
 }

@@ -359,6 +359,9 @@ p {
 .wf-loading {
   visibility: hidden; }
 
+body > svg {
+  position: absolute; }
+
 .row {
   max-width: 1200px;
   margin-left: auto;
@@ -536,14 +539,24 @@ p {
 
 .ghost-btn {
   display: inline-block;
+  position: relative;
   margin-top: 1rem;
-  padding: .1rem 1.5rem;
+  padding: .75rem 2.5rem .75rem 1.5rem;
   color: #1d4b65;
   border: 1px solid;
   text-decoration: none; }
+  .ghost-btn svg {
+    position: absolute;
+    top: .65rem;
+    right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #1d4b65; }
   .ghost-btn:hover, .ghost-btn:focus {
     background: #1d4b65;
     color: #fff; }
+    .ghost-btn:hover svg, .ghost-btn:focus svg {
+      fill: #fff; }
 
 body.single {
   margin-top: 110px; }
