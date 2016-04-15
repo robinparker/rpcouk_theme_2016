@@ -432,6 +432,7 @@ body > svg {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
   position: relative;
   height: 110px;
   color: #fff; }
@@ -439,6 +440,9 @@ body > svg {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (min-width: 750px) {
+    .site-header {
+      padding: 0; } }
   .site-header .logo {
     float: left;
     position: relative;
@@ -484,11 +488,15 @@ body > svg {
   .site-footer > div {
     max-width: 1200px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding: 0 1rem; }
     .site-footer > div::after {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (min-width: 750px) {
+      .site-footer > div {
+        padding: 0; } }
 
 .the-big-picture {
   width: 100%;
@@ -524,11 +532,15 @@ body > svg {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
   margin-top: 4rem; }
   .about-me::after {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (min-width: 750px) {
+    .about-me {
+      padding: 0; } }
   .about-me section {
     float: left;
     display: block;

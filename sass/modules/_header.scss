@@ -8,6 +8,7 @@
 
 .site-header {
   @include outer-container();
+  @include mobile-padding();
   position: relative;
   height: 110px;
   color: #fff;

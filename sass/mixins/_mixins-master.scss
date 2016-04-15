@@ -22,3 +22,10 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin mobile-padding() {
+	padding: 0 1rem;
+	@include media($tablet) {
+		padding: 0;
+	}
+}
