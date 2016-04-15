@@ -359,6 +359,15 @@ p {
 .wf-loading {
   visibility: hidden; }
 
+.row {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .row::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 .full-width-3 {
   width: 100%;
   margin-top: 4rem;
@@ -372,7 +381,10 @@ p {
   .full-width-3 .title-block {
     max-width: 1200px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-bottom: -2.6rem;
+    position: relative;
+    z-index: 99; }
     .full-width-3 .title-block::after {
       clear: both;
       content: "";
@@ -410,7 +422,7 @@ p {
   background: #c2202b;
   position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 999;
   width: 100%; }
 
 .site-header {
@@ -464,7 +476,8 @@ p {
 .site-footer {
   background: #1d4b65;
   color: #fff;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  margin-top: 2rem; }
   .site-footer > div {
     max-width: 1200px;
     margin-left: auto;
@@ -496,6 +509,7 @@ p {
     top: 1.875rem;
     font-family: 'Ziggurat', Georgia, "Times New Roman", Times, serif;
     font-size: 2.5rem;
+    font-weight: normal;
     color: #c2202b;
     text-align: right; }
     .the-big-picture h1 span {
@@ -520,12 +534,23 @@ p {
     .about-me section:last-child {
       margin-right: 0; }
 
+.ghost-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .1rem 1.5rem;
+  color: #1d4b65;
+  border: 1px solid;
+  text-decoration: none; }
+  .ghost-btn:hover, .ghost-btn:focus {
+    background: #1d4b65;
+    color: #fff; }
+
 body.single {
   margin-top: 110px; }
   body.single .project-heading {
     overflow: hidden;
     margin-top: -2rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     position: relative;
     z-index: 99;
     background: #c2202b;
@@ -534,13 +559,18 @@ body.single {
       color: #fff;
       float: left;
       margin: 0;
-      line-height: 1; }
+      line-height: 1rem; }
     body.single .project-heading ul {
       float: right;
       margin: 0; }
     body.single .project-heading li {
       list-style-type: none;
-      display: inline-block; }
+      display: inline-block;
+      padding-left: 1.75rem;
+      margin-right: 1.25rem;
+      background: url("assets/imgs/skill-list-check.svg") left center no-repeat; }
+      body.single .project-heading li:last-child {
+        margin-right: 0; }
   body.single section {
     max-width: 1200px;
     margin-left: auto;
@@ -549,3 +579,12 @@ body.single {
       clear: both;
       content: "";
       display: table; }
+    body.single section .project-description {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%;
+      margin-top: 3rem; }
+      body.single section .project-description:last-child {
+        margin-right: 0; }

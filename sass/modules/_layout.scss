@@ -1,3 +1,7 @@
+.row {
+  @include outer-container();
+}
+
 .full-width-3 {
   @include clearfix;
   width: 100%;
@@ -8,6 +12,9 @@
   }
   .title-block {
     @include outer-container();
+    margin-bottom: -2.6rem;
+    position: relative;
+    z-index: 99;
     h2 {
       background: $rp-red;
       color: #fff;

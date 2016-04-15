@@ -15,6 +15,7 @@
     top: rem(30);
     font-family: 'Ziggurat', Georgia, "Times New Roman", Times, serif;
     font-size: rem(40);
+    font-weight: normal;
     color: $rp-red;
     text-align: right;
     span {
@@ -35,4 +36,17 @@
   @include span-columns(8);
   }
   margin-top: 4rem;
+}
+
+.ghost-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .1rem 1.5rem;
+  color: $rp-blue;
+  border: 1px solid;
+  text-decoration: none;
+  &:hover, &:focus {
+    background: $rp-blue;
+    color: #fff;
+  }
 }

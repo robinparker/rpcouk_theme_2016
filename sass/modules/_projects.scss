@@ -3,7 +3,7 @@ body.single {
   .project-heading {
     overflow: hidden;
     margin-top: -2rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     position: relative;
     z-index: 99;
     background: $rp-red;
@@ -12,7 +12,7 @@ body.single {
       color: #fff;
       float: left;
       margin: 0;
-      line-height: 1;
+      line-height: 1rem;
     }
     ul {
       float: right;
@@ -21,9 +21,20 @@ body.single {
     li {
       list-style-type: none;
       display: inline-block;
+      padding-left: 1.75rem;
+      margin-right: 1.25rem;
+      background: url('assets/imgs/skill-list-check.svg') left center no-repeat;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
   section {
     @include outer-container();
+    .project-description {
+       @include span-columns(8);
+       @include shift(2);
+       margin-top: 3rem;
+    }
   }
 }

@@ -28,14 +28,7 @@ get_header(); ?>
 			<h2> About me</h2>
 			<?php
 			while ( have_posts() ) : the_post();
-
 				the_content();
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
 			endwhile; // End of the loop.
 			?>
 		</section>
@@ -65,6 +58,10 @@ get_header(); ?>
 		?>
 	</div>
 
+	<div class="row">
+		<a href="my-work" class="ghost-btn">See more of my work</a>
+	</div>
+
 
 	<div class="full-width-3 blog">
 		<div class="title-block">
@@ -78,13 +75,18 @@ get_header(); ?>
 		  // the_title();
 			the_post_thumbnail();
 		  // echo '<div class="entry-content">';
-		  // the_content();
+		  the_content();
 		  // echo '</div>';
 			echo '</a>';
 		endwhile;
 		?>
 
 	</div>
+
+	<div class="row">
+		<a href="blog" class="ghost-btn">See all blog posts</a>
+	</div>
+
 
 		</main><!-- #main -->
 

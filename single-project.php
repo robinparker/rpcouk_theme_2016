@@ -50,11 +50,10 @@ get_header(); ?>
 				 ?>
 			</header>
 
-
+			<div class="project-description">
+				<?php the_content(); ?>
+			</div>
 			<?php
-				the_content();
-
-
 			endwhile; // End of the loop.
 			?>
 		</section>
