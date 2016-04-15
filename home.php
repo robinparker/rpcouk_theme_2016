@@ -24,7 +24,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div class="about-me">
-				<section>
+			<section>
 			<h2> About me</h2>
 			<?php
 			while ( have_posts() ) : the_post();
@@ -32,6 +32,32 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 		</section>
+		<aside>
+			<ul class="social-links">
+				<li>
+					<a href="http://twitter.com/robin_parker" rel="external">
+					<svg role="img">
+		  			<use xlink:href="#twitter"></use>
+					</svg>
+					<span>robin_parker</span>
+				</a>
+				</li>
+				<li>
+					<a href="http://uk.linkedin.com/in/robinkparker" rel="external">
+					<svg role="img">
+		  			<use xlink:href="#linkedin"></use>
+					</svg>
+					<span>robinkparker</span>
+				</a>
+				</li>
+			</ul>
+			<h4>
+				<!-- <svg role="img">
+					<use xlink:href="#calendar"></use>
+				</svg> -->
+				Availability</h4>
+			<p>I'm available for UI/Front-end Development contract work from June 2016</p>
+		</aside>
 		</div>
 
 		<div class="full-width-3 work">

@@ -34,6 +34,63 @@
   @include outer-container();
   section {
   @include span-columns(8);
+  padding-right: 4rem;
+  }
+  aside {
+    @include span-columns(4);
+    .social-links {
+      margin-top: 5rem;
+      padding-left: 0;
+      li {
+        list-style-type: none;
+        margin-bottom: .5rem;
+      }
+      a {
+        color: $rp-blue;
+        text-decoration: none;
+        span {
+          font-size: rem(18);
+          position: relative;
+          left: .5rem;
+          bottom: 15px;
+        }
+        svg {
+          width: rem(40);
+          height: rem(40);
+          border: 1px solid;
+          border-radius: 50%;
+          fill: $rp-blue;
+        }
+        &:hover, &:focus {
+          color: #fff;
+          span {
+            color: $rp-blue;
+            text-decoration: underline;
+          }
+          svg {
+            background: $rp-blue;
+            fill: #fff;
+          }
+        }
+      }
+    }
+    h4 {
+      font-family: "proxima-nova",sans-serif;
+      font-weight: bold;
+      color: $rp-copy-grey;
+      margin-bottom: 0;
+      margin-top: 3rem;
+      svg {
+        width: rem(40);
+        height: rem(40);
+        border: 1px solid;
+        border-radius: 50%;
+        fill: $rp-copy-grey;
+      }
+    }
+    p {
+      margin-top: .5rem;
+    }
   }
   margin-top: 4rem;
 }
