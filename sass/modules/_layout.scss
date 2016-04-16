@@ -1,3 +1,7 @@
+body.single, body.page-template-my-work {
+  margin-top: 110px;
+}
+
 body > svg {
   position: absolute;
 }
@@ -33,6 +37,56 @@ body > svg {
     position: relative;
     @include media($tablet) {
       width: 33.3333%;
+    }
+    img {
+      display: block;
+    }
+    .project-info {
+      text-align: center;
+      position: absolute;
+      background: rgba(0, 0, 0, .5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      opacity: 0;
+      transition: all 0.5s ease;
+      h3 {
+        margin-top: 25%;
+        color: #fff;
+      }
+      p {
+        color: #fff;
+      }
+    }
+    .post-info {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        background: rgba(0, 0, 0, .5);
+        h3 {
+          margin-top: 25%;
+          color: #fff;
+        }
+        p {
+          color: #fff;
+        }
+    }
+    &:hover {
+      .project-info {
+        opacity: 1;
+        h3 {
+          margin-top: 25%;
+        }
+        p {
+
+        }
+      }
     }
   }
 }

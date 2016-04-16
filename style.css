@@ -339,7 +339,7 @@ body {
 
 h2, h3, h4 {
   font-family: "clarendon-urw",serif;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 1.625rem;
   color: #c2202b; }
 
@@ -358,6 +358,9 @@ p {
 
 .wf-loading {
   visibility: hidden; }
+
+body.single, body.page-template-my-work {
+  margin-top: 110px; }
 
 body > svg {
   position: absolute; }
@@ -405,6 +408,42 @@ body > svg {
     @media screen and (min-width: 750px) {
       .full-width-3 .fw-3-col {
         width: 33.3333%; } }
+    .full-width-3 .fw-3-col img {
+      display: block; }
+    .full-width-3 .fw-3-col .project-info {
+      text-align: center;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      opacity: 0;
+      transition: all 0.5s ease; }
+      .full-width-3 .fw-3-col .project-info h3 {
+        margin-top: 25%;
+        color: #fff; }
+      .full-width-3 .fw-3-col .project-info p {
+        color: #fff; }
+    .full-width-3 .fw-3-col .post-info {
+      position: absolute;
+      text-align: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5); }
+      .full-width-3 .fw-3-col .post-info h3 {
+        margin-top: 25%;
+        color: #fff; }
+      .full-width-3 .fw-3-col .post-info p {
+        color: #fff; }
+    .full-width-3 .fw-3-col:hover .project-info {
+      opacity: 1; }
+      .full-width-3 .fw-3-col:hover .project-info h3 {
+        margin-top: 25%; }
 
 .section-heading {
   width: 100%;
@@ -620,46 +659,45 @@ body > svg {
     .ghost-btn:hover svg, .ghost-btn:focus svg {
       fill: #fff; }
 
-body.single {
-  margin-top: 110px; }
-  body.single .project-heading {
-    overflow: hidden;
-    margin-top: -2rem;
-    padding: 1rem 1.5rem;
-    position: relative;
-    z-index: 99;
-    background: #c2202b;
-    color: #fff; }
-    body.single .project-heading h2 {
-      color: #fff;
-      float: left;
-      margin: 0;
-      line-height: 1rem; }
-    body.single .project-heading ul {
-      float: right;
-      margin: 0; }
-    body.single .project-heading li {
-      list-style-type: none;
-      display: inline-block;
-      padding-left: 1.75rem;
-      margin-right: 1.25rem;
-      background: url("assets/imgs/skill-list-check.svg") left center no-repeat; }
-      body.single .project-heading li:last-child {
-        margin-right: 0; }
-  body.single section {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto; }
-    body.single section::after {
-      clear: both;
-      content: "";
-      display: table; }
-    body.single section .project-description {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
-      margin-left: 17.05961%;
-      margin-top: 3rem; }
-      body.single section .project-description:last-child {
-        margin-right: 0; }
+body.single .project-heading {
+  overflow: hidden;
+  margin-top: -2rem;
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 99;
+  background: #c2202b;
+  color: #fff; }
+  body.single .project-heading h2 {
+    color: #fff;
+    float: left;
+    margin: 0;
+    line-height: 1rem; }
+  body.single .project-heading ul {
+    float: right;
+    margin: 0; }
+  body.single .project-heading li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 1.75rem;
+    margin-right: 1.25rem;
+    background: url("assets/imgs/skill-list-check.svg") left center no-repeat; }
+    body.single .project-heading li:last-child {
+      margin-right: 0; }
+
+body.single section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  body.single section::after {
+    clear: both;
+    content: "";
+    display: table; }
+  body.single section .project-description {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+    margin-top: 3rem; }
+    body.single section .project-description:last-child {
+      margin-right: 0; }

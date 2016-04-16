@@ -78,7 +78,13 @@ get_header(); ?>
 		  // the_content();
 			// the_permalink();
 		  // echo '</div>';
-			echo '</a>';
+			?>
+			<div class="project-info">
+				<h3><?php the_title(); ?></h3>
+				<p>See details</p>
+			</div>
+			</a>
+			<?php
 		endwhile;
 
 		?>
@@ -107,7 +113,14 @@ get_header(); ?>
 		  // echo '<div class="entry-content">';
 		  // the_content();
 		  // echo '</div>';
-			echo '</a>';
+			?>
+			<div class="post-info">
+				<h3><?php the_title(); ?></h3>
+				<p><?php the_date(); ?></p>
+			</div>
+			</a>
+
+			<?php
 		endwhile;
 		?>
 

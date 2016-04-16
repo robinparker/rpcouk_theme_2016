@@ -39,8 +39,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "modules/accessibility";
 
-
-
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -50,6 +48,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+@import 'modules/animations';
 
 
 @import "bourbon/bourbon";
