@@ -52,38 +52,30 @@ get_header(); ?>
 				</li>
 			</ul>
 			<h4>
-				<!-- <svg role="img">
-					<use xlink:href="#calendar"></use>
-				</svg> -->
 				Availability</h4>
 			<p>I'm available for UI/Front-end Development contract work from June 2016</p>
 		</aside>
 		</div>
 
+
+		<div class="title-block">
+			<h2>My work</h2>
+		</div>
 		<div class="full-width-3 work">
-			<div class="title-block">
-				<h2>My work</h2>
-			</div>
 		<?php
 		$args = array( 'post_type' => 'project', 'posts_per_page' => 3 );
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
-			echo '<a class="work-three--item fw-3-col" href="' .get_permalink() .'">';
-		  // the_title();
+			echo '<div><a class="work-three--item fw-3-col" href="' .get_permalink() .'">';
 			?>
-			<!-- <img src="<?php the_field('main_image'); ?>" /> -->
 			<?php
 			the_post_thumbnail();
-		  // echo '<div class="entry-content">';
-		  // the_content();
-			// the_permalink();
-		  // echo '</div>';
 			?>
 			<div class="project-info">
 				<h3><?php the_title(); ?></h3>
 				<p>See details</p>
 			</div>
-			</a>
+		</a></div>
 			<?php
 		endwhile;
 
@@ -99,27 +91,22 @@ get_header(); ?>
 	</div>
 
 
+	<div class="title-block">
+		<h2>Blog</h2>
+	</div>
 	<div class="full-width-3 blog">
-		<div class="title-block">
-			<h2>Blog</h2>
-		</div>
 		<?php
 		$args = array( 'post_type' => 'post', 'posts_per_page' => 3 );
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
-		echo '<a class="blog-three--item fw-3-col" href="' .get_permalink() .'">';
-		  // the_title();
+		echo '<div><a class="blog-three--item fw-3-col" href="' .get_permalink() .'">';
 			the_post_thumbnail();
-		  // echo '<div class="entry-content">';
-		  // the_content();
-		  // echo '</div>';
 			?>
 			<div class="post-info">
 				<h3><?php the_title(); ?></h3>
 				<p><?php the_date(); ?></p>
 			</div>
-			</a>
-
+		</a></div>
 			<?php
 		endwhile;
 		?>
