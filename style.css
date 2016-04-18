@@ -359,10 +359,10 @@ p {
 .wf-loading {
   visibility: hidden; }
 
-body.single, body.page-template-my-work {
+body.single, body.page-template-my-work, body.page-template-blog {
   margin-top: 90px; }
   @media screen and (min-width: 750px) {
-    body.single, body.page-template-my-work {
+    body.single, body.page-template-my-work, body.page-template-blog {
       margin-top: 110px; } }
 
 body > svg {
@@ -769,6 +769,24 @@ body.single section {
     margin-top: 3rem; }
     body.single section .project-description:last-child {
       margin-right: 0; }
+
+.row.post-summary .post-summary_img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .row.post-summary .post-summary_img:last-child {
+    margin-right: 0; }
+
+.row.post-summary .post-summary_text {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .row.post-summary .post-summary_text:last-child {
+    margin-right: 0; }
+  .row.post-summary .post-summary_text h2 {
+    margin-top: 0; }
 
 /* Slider */
 .slick-slider {
