@@ -49,6 +49,7 @@
     right: 1rem;
     bottom: 0;
     ul {
+      margin-bottom: 0;
       li {
         list-style-type: none;
         display: inline-block;
@@ -57,11 +58,35 @@
           margin-right: 0;
         }
         a {
+          display: inline-block;
+          padding-bottom: 1rem;
           color: #fff;
           font-size: rem(18);
           text-decoration: none;
-          &:hover, &:focus {
-            text-decoration: underline;
+          position: relative;
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            width: 0;
+            height: 4px;
+            transition: all 0.25s ease;
+          }
+          &:hover {
+            // text-decoration: underline;
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+        &.current_page_item {
+          a {
+            &:after {
+              width: 100%;
+            }
           }
         }
       }

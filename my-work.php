@@ -17,18 +17,15 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 
-		<div class="full-width-3 work">
+			<header class="section-heading"><h2>My work</h2></header>
+
 		<?php
 		$args = array( 'post_type' => 'project', 'posts_per_page' => 10 );
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
-			echo '<a class="work-three--item fw-3-col" href="' .get_permalink() .'">';
+			echo '<a href="' .get_permalink() .'">';
 		  // the_title();
-			?>
-			<!-- <img src="<?php the_field('main_image'); ?>" /> -->
-			<?php
 			the_post_thumbnail();
-		  // echo '<div class="entry-content">';
 		  // the_content();
 			// the_permalink();
 		  // echo '</div>';
@@ -36,7 +33,7 @@ get_header(); ?>
 		endwhile;
 
 		?>
-	</div>
+
 
 
 

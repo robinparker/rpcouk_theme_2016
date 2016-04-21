@@ -3,8 +3,21 @@
   color: #fff;
   padding: 1rem 0;
   margin-top: 5rem;
+  text-align: center;
   > div {
     @include outer-container();
     @include mobile-padding();
+  }
+  p {
+    display: inline-block;
+    font-size: rem(14);
+    span {
+      font-weight: bold;
+    }
+    &.rrf {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 1px solid #fff;
+    }
   }
 }

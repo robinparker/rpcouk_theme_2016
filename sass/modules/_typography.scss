@@ -15,9 +15,9 @@ body {
   color: $rp-copy-grey;
 }
 
-h2, h3, h4 {
+h2, h3, h4, .single-post h1 {
   font-family: "clarendon-urw",serif;
-  font-weight: normal;
+  font-weight: 500;
   font-size: rem(26);
   color: $rp-red;
 }

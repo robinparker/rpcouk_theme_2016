@@ -28,6 +28,9 @@ body.single {
       }
     }
   }
+  .section-heading {
+    margin-bottom: 0;
+  }
   section {
     @include outer-container();
     .project-description {
@@ -35,5 +38,11 @@ body.single {
        @include shift(2);
        margin-top: 3rem;
     }
+  }
+}
+
+.page-template-my-work {
+  .site-main {
+    
   }
 }
