@@ -41,7 +41,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php rpcouk_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

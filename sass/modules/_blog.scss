@@ -8,6 +8,12 @@
     header, div {
       @include span-columns(8);
     }
+    header {
+      margin-bottom: 1rem;
+    }
+    a {
+      color: $rp-red;
+    }
   }
 }
 

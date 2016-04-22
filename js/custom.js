@@ -26,5 +26,13 @@ $(function() {
     ]
   });
 
+  var rrFacts = ['I share my birthday with Howie Dorough of Backstreet Boys',
+                'I once accidentally wandered onto the stage during a live Sooty & Sweep show',
+                'I once appeared on national TV dressed as Robin the boy wonder',
+                'The first gig I ever went to was Bucks Fizz at Deeside Leisure Centre',
+                'I quite like Star Wars'];
+  var rrNum = Math.floor((Math.random() * 4) + 1);
+  $('.rrf-fact').text(rrFacts[rrNum]);
+
 
 });

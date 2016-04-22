@@ -1,0 +1,27 @@
+.page {
+
+  .site-main {
+    margin-top: 11rem;
+    @include outer-container();
+    @include mobile-padding();
+  }
+  article {
+    @include span-columns(6);
+    @include shift(3);
+  }
+  .ninja-forms-form-wrap {
+    .ninja-forms-required-items {
+      margin-bottom: 1rem;
+    }
+    .ninja-forms-error-msg {
+      display: none;
+    }
+    input {
+      padding: .5rem;
+    }
+    .ninja-forms-success-msg {
+      min-height: 300px;
+    }
+  }
+
+}

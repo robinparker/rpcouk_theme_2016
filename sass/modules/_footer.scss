@@ -11,13 +11,14 @@
   p {
     display: inline-block;
     font-size: rem(14);
-    span {
-      font-weight: bold;
-    }
     &.rrf {
       margin-left: 1rem;
       padding-left: 1rem;
       border-left: 1px solid #fff;
+      .rrf-label {
+        font-weight: bold;
+        margin-right: .25rem;
+      }
     }
   }
 }
