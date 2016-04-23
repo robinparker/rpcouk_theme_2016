@@ -10,7 +10,7 @@
   @include outer-container();
   @include mobile-padding();
   position: relative;
-  height: 90px;
+  min-height: 90px;
   color: #fff;
   @include media($tablet) {
     height: 110px;
@@ -45,15 +45,34 @@
     }
   }
   .main-navigation {
-    position: absolute;
-    right: 1rem;
-    bottom: 0;
+
+
+    @include media($tablet) {
+      position: absolute;
+      right: 1rem;
+      bottom: 0;
+    }
     ul {
-      margin-bottom: 0;
+      position: relative;
+      top: 1rem;
+      margin-bottom: 3rem;
+      padding: 0;
+      text-align: center;
+      clear: left;
+      @include media($tablet) {
+        top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        clear: none;
+      }
       li {
         list-style-type: none;
-        display: inline-block;
-        margin-right: 2rem;
+        margin-bottom: 1rem;
+        @include media($tablet) {
+          display: inline-block;
+          margin-right: 2rem;
+          margin-bottom: 0;
+        }
         &:last-child {
           margin-right: 0;
         }
@@ -68,12 +87,16 @@
             content: '';
             display: block;
             position: absolute;
-            bottom: 0;
+            bottom: .5rem;
             left: 0;
             background: #fff;
             width: 0;
-            height: 4px;
+            height: 2px;
             transition: all 0.25s ease;
+            @include media($tablet) {
+              bottom: 0;
+              height: 4px;
+            }
           }
           &:hover {
             // text-decoration: underline;

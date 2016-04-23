@@ -15,7 +15,7 @@ body {
   color: $rp-copy-grey;
 }
 
-h2, h3, h4, .single-post h1, .page h1 {
+h3, h4, .single-post h1, .page h1 {
   font-family: "clarendon-urw",serif;
   font-weight: 500;
   font-size: rem(26);
@@ -23,7 +23,13 @@ h2, h3, h4, .single-post h1, .page h1 {
 }
 
 h2 {
-  font-size: rem(26);
+  font-family: "clarendon-urw",serif;
+  font-weight: 500;
+  color: $rp-red;
+  font-size: rem(20);
+  @include media($tablet) {
+    font-size: rem(26);
+  }
 }
 
 h3 {

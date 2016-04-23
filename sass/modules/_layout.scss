@@ -84,5 +84,8 @@ body > svg {
     padding-bottom: .5rem !important;
     color: #fff;
     margin: 0 auto;
+    @include media($tablet) {
+      
+    }
   }
 }

@@ -2,7 +2,16 @@
   .projects {
     @include outer-container();
     .project {
-      @include span-columns(6);
+      @include span-columns(12);
+      margin-bottom: 1.5rem;
+      @include media($tablet) {
+        @include span-columns(6);
+      }
+      &:nth-child(even) {
+        @include media($tablet) {
+          margin-right: 0;
+        }
+      }
     }
   }
 }
