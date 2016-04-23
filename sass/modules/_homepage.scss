@@ -51,14 +51,26 @@
   @include outer-container();
   @include mobile-padding();
   section {
-  @include span-columns(8);
-  padding-right: 4rem;
+  @include span-columns(12);
+
+  @include media($tablet) {
+    @include span-columns(8);
+    padding-right: 4rem;
+    }
+
   }
   aside {
-    @include span-columns(4);
+    @include span-columns(12);
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
     .social-links {
-      margin-top: 5rem;
+      margin-top: 0;
       padding-left: 0;
+      @include media($tablet) {
+        margin-top: 5rem;
+      }
       li {
         list-style-type: none;
         margin-bottom: .5rem;
@@ -97,7 +109,10 @@
       font-weight: bold;
       color: $rp-copy-grey;
       margin-bottom: 0;
-      margin-top: 3rem;
+      margin-top: 0;
+      @include media($tablet) {
+        margin-top: 3rem;
+      }
       svg {
         width: rem(40);
         height: rem(40);

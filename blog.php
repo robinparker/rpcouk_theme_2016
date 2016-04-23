@@ -34,7 +34,7 @@ get_header(); ?>
 				?>
 			</div>
 			<div class="post-summary_text">
-				<h3><?php the_title(); ?></h3>
+				<h3><a href="<?php get_permalink() ?>"><?php the_title(); ?></a></h3>
 				<span><?php the_date(); ?></span>
 				<p><?php the_excerpt(); ?></p>
 			</div>

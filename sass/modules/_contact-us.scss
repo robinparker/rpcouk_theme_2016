@@ -1,4 +1,4 @@
-.page {
+.page-template-contact-me {
 
   .site-main {
     margin-top: 11rem;
@@ -21,6 +21,23 @@
     }
     .ninja-forms-success-msg {
       min-height: 300px;
+    }
+  }
+
+  input[type="submit"] {
+    display: inline-block;
+    position: relative;
+    margin-top: 1rem;
+    padding: .75rem 1.5rem;
+    font-size: rem(18);
+    color: #fff;
+    background: $rp-blue;
+    border: 1px solid;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    &:hover, &:focus {
+      background: #fff;
+      color: $rp-blue;
     }
   }
 

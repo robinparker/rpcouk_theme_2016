@@ -1,3 +1,12 @@
+.page-template-my-work {
+  .projects {
+    @include outer-container();
+    .project {
+      @include span-columns(6);
+    }
+  }
+}
+
 body.single {
   .project-heading {
     overflow: hidden;
@@ -43,6 +52,6 @@ body.single {
 
 .page-template-my-work {
   .site-main {
-    
+
   }
 }

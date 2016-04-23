@@ -19,10 +19,12 @@ get_header(); ?>
 
 			<header class="section-heading"><h2>My work</h2></header>
 
+			<div class="projects">
 		<?php
 		$args = array( 'post_type' => 'project', 'posts_per_page' => 10 );
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
+			echo '<div class="project">';
 			echo '<a href="' .get_permalink() .'">';
 		  // the_title();
 			the_post_thumbnail();
@@ -30,12 +32,11 @@ get_header(); ?>
 			// the_permalink();
 		  // echo '</div>';
 			echo '</a>';
+			echo '</div>';
 		endwhile;
 
 		?>
-
-
-
+	</div>
 
 		</main><!-- #main -->
 
