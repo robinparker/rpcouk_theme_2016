@@ -10,7 +10,7 @@
   @include outer-container();
   @include mobile-padding();
   position: relative;
-  min-height: 90px;
+  min-height: 95px;
   color: #fff;
   @include media($tablet) {
     height: 110px;
@@ -46,7 +46,6 @@
   }
   .main-navigation {
 
-
     @include media($tablet) {
       position: absolute;
       right: 1rem;
@@ -54,16 +53,22 @@
     }
     ul {
       position: relative;
-      top: 1rem;
-      margin-bottom: 3rem;
+      top: 2rem;
       padding: 0;
       text-align: center;
-      clear: left;
+      clear: both;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.6s ease;
+      &.is-active {
+        max-height: 500px;
+      }
       @include media($tablet) {
         top: 0;
         margin-bottom: 0;
         text-align: left;
         clear: none;
+        max-height: 500px;
       }
       li {
         list-style-type: none;
@@ -75,6 +80,10 @@
         }
         &:last-child {
           margin-right: 0;
+          margin-bottom: 3rem;
+          @include media($tablet) {
+            margin-bottom: 0;
+          }
         }
         a {
           display: inline-block;
@@ -114,5 +123,79 @@
         }
       }
     }
+
+
+    .mobile-menu-toggle {
+      float: right;
+      position: relative;
+      overflow: hidden;
+      background: none;
+      margin: 0;
+      padding: 0;
+      width: 70px;
+      height: 70px;
+      font-size: 0;
+      text-indent: -9999px;
+      appearance: none;
+      box-shadow: none;
+      border-radius: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      @include media($tablet) {
+        display: none;
+      }
+      &:focus {
+        outline: none;
+      }
+      span {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        right: 10px;
+        height: 4px;
+        background: white;
+        transition: background 0s 0.3s;
+        &:before, &:after {
+          position: absolute;
+          display: block;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: #fff;
+          content: "";
+          transition-duration: 0.3s, 0.3s;
+          transition-delay: 0.3s, 0s;
+        }
+        &:before {
+          top: -14px;
+          transition-property: top, transform;
+        }
+        &:after {
+          bottom: -14px;
+          transition-property: bottom, transform;
+        }
+      }
+      &.is-active {
+        span {
+          background: none;
+          &:before {
+            top: 0;
+            transform: rotate(45deg);
+          }
+          &:after {
+            bottom: 0;
+            transform: rotate(-45deg);
+          }
+          &:before, &:after {
+            transition-delay: 0s, 0.3s;
+          }
+        }
+      }
+    }
+
+
+
   }
 }

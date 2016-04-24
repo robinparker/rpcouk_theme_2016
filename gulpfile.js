@@ -7,7 +7,7 @@ gulp.task('sass', function () {
     gulp.src('sass/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('/sass/maps'))
         .pipe(gulp.dest('./'));
 });
 

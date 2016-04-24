@@ -1,5 +1,15 @@
 $(function() {
 
+  $('.mobile-menu-toggle').on('click', function() {
+    if ( $(this).hasClass('is-active') ) {
+      $(this).removeClass('is-active');
+      $('.main-navigation ul').removeClass('is-active');
+    } else {
+      $(this).addClass('is-active');
+      $('.main-navigation ul').addClass('is-active');
+    }
+  });
+
   $('.full-width-3.work, .full-width-3.blog').slick({
     centerMode: true,
     centerPadding: '40px',

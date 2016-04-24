@@ -32,7 +32,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php include("assets/svg-symbols.svg"); ?>  
+<?php include("assets/svg-symbols.svg"); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'rpcouk' ); ?></a>
 
@@ -40,6 +40,9 @@
 	<header id="masthead" class="site-header" role="banner">
 			<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span>RP</span></a>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
+      <button class="mobile-menu-toggle">
+        <span>toggle menu</span>
+      </button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
