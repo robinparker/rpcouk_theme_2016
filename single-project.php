@@ -49,6 +49,13 @@ get_header(); ?>
 				}
 				 ?>
 			</header>
+			
+<?php
+if(get_field('project_link_url'))
+{
+  echo '<a class="project-link" href="' . get_field('project_link_url') . '">' . get_field('project_link_title') . '</a>';
+}
+?>			
 
 			<div class="project-description">
 				<?php the_content(); ?>
