@@ -66,9 +66,11 @@
       @include span-columns(4);
     }
     .social-links {
-      margin-top: 0;
+      margin-top: 1rem;
       padding-left: 0;
+      margin-bottom: 2rem;
       @include media($tablet) {
+        margin-bottom: 0;
         margin-top: 5rem;
       }
       li {
@@ -199,4 +201,10 @@
       }
     }
   }
+}
+
+.twitter-card-home-img {
+  visibility: hidden;
+  position: absolute;
+  top: -9999px;
 }

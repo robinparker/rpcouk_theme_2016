@@ -9,15 +9,25 @@
     @include mobile-padding();
   }
   p {
-    display: inline-block;
+    display: block;
     font-size: rem(14);
+    @include media($tablet) {
+      display: inline-block;
+    }
     &.rrf {
-      margin-left: 1rem;
-      padding-left: 1rem;
-      border-left: 1px solid #fff;
+
+
+      @include media($tablet) {
+        border-left: 1px solid #fff;
+        margin-left: 1rem;
+        padding-left: 1rem;
+      }
       .rrf-label {
         font-weight: bold;
         margin-right: .25rem;
+      }
+      .rrf-fact {
+        font-style: italic;
       }
     }
   }

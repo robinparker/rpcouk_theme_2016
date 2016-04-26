@@ -37,27 +37,38 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
-
 			?>
 
 			<header class="project-heading">
 				<h2><?php the_title(); ?></h2>
 				<?php
-				if(get_field('project_link_url'))
-				{
-				  echo '<a class="project-link" href="' . get_field('project_link_url') . '">' . get_field('project_link_title') . '</a>';
-				}
-
 				if(get_field('skill_list'))
 				{
 					echo get_field('skill_list');
 				}
-				 ?>
+				?>
 			</header>
 
+
+
+			<div class="row">
 			<div class="project-description">
-				<?php the_content(); ?>
+				<?php
+				the_content();
+				?>
 			</div>
+			<div class="project-link">
+				<?php
+				if(get_field('project_link_url'))
+				{
+				  echo '<a class="ghost-btn" href="' . get_field('project_link_url') . '" target="blank">' . get_field('project_link_title') . '<svg role="img"><use xlink:href="#chevronright"></use></svg></a>';
+				}
+				?>
+			</div>
+		</div>
+
+
+
 			<?php
 			endwhile; // End of the loop.
 			?>

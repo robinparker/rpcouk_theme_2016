@@ -121,9 +121,10 @@ get_header(); ?>
 		</a>
 	</div>
 
-
 		</main><!-- #main -->
 
+		<!-- twitter card img -->
+		<!-- <img class="twitter-card-home-img" src="<?php bloginfo( 'template_directory' ); ?>/assets/imgs/twitter-card-img-lego.jpg" /> -->
 
 <?php
 get_footer();
