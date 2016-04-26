@@ -43,19 +43,17 @@ get_header(); ?>
 			<header class="project-heading">
 				<h2><?php the_title(); ?></h2>
 				<?php
+				if(get_field('project_link_url'))
+				{
+				  echo '<a class="project-link" href="' . get_field('project_link_url') . '">' . get_field('project_link_title') . '</a>';
+				}
+
 				if(get_field('skill_list'))
 				{
 					echo get_field('skill_list');
 				}
 				 ?>
 			</header>
-			
-<?php
-if(get_field('project_link_url'))
-{
-  echo '<a class="project-link" href="' . get_field('project_link_url') . '">' . get_field('project_link_title') . '</a>';
-}
-?>			
 
 			<div class="project-description">
 				<?php the_content(); ?>

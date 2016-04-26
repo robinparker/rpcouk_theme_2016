@@ -499,8 +499,10 @@ body > svg {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    overflow: hidden;
     background: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: all 0.5s ease; }
     @media screen and (min-width: 750px) {
       .site-header .logo {
         width: 4.6875rem;
@@ -512,11 +514,18 @@ body > svg {
       font-family: 'Ziggurat', Georgia, "Times New Roman", Times, serif;
       font-style: italic;
       font-size: 1.875rem;
+      letter-spacing: 0;
       text-decoration: none;
-      color: #c2202b; }
+      color: #c2202b;
+      transition: all 0.5s ease; }
+      .site-header .logo span:after {
+        display: block; }
       @media screen and (min-width: 750px) {
         .site-header .logo span {
           font-size: 2.1875rem; } }
+    .site-header .logo:hover span {
+      letter-spacing: 100px;
+      right: -130px; }
   @media screen and (min-width: 750px) {
     .site-header .main-navigation {
       position: absolute;
@@ -910,6 +919,10 @@ body.single .project-heading {
     float: left;
     margin: 0;
     line-height: 1rem; }
+  body.single .project-heading a {
+    float: left;
+    margin-left: 1rem;
+    color: #fff; }
   body.single .project-heading ul {
     float: right;
     margin: 0; }
