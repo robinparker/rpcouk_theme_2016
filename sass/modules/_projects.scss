@@ -1,7 +1,10 @@
 .page-template-my-work {
   .projects {
     @include outer-container();
+    margin-top: 3rem;
     .project {
+      position: relative;
+      overflow: hidden;
       @include span-columns(12);
       margin-bottom: 1.5rem;
       @include media($tablet) {
