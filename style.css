@@ -1350,8 +1350,8 @@ body.page-template-star-wars-mode {
       -webkit-animation: logo 9s ease-out 9s;
       animation: logo 9s ease-out 9s; }
       .starwars section.logo svg {
-        width: 60%;
-        margin-left: 30%; }
+        width: 50%;
+        margin-left: 25%; }
         @media screen and (min-width: 750px) {
           .starwars section.logo svg {
             width: inherit;
@@ -1381,9 +1381,13 @@ body.page-template-star-wars-mode {
         animation: titles 81s linear 13s; }
         .starwars section.titles > div > p {
           margin: 1.35em 0 1.85em 0;
+          font-size: 25px;
           line-height: 1.35em;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
+          @media screen and (min-width: 750px) {
+            .starwars section.titles > div > p {
+              font-size: 52px; } }
 
 .end-msg {
   position: absolute;
@@ -1466,5 +1470,64 @@ body.page-template-star-wars-mode {
   100% {
     top: 20%;
     opacity: 0; } }
+
+.exit-btn {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding-right: 5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal; }
+  .exit-btn > span {
+    font-size: 14px; }
+  .exit-btn .toggle-icon {
+    display: block;
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    -webkit-transition: margin 500ms;
+    -moz-transition: margin 500ms;
+    transition: margin 500ms;
+    cursor: pointer;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75); }
+    .exit-btn .toggle-icon .bar {
+      display: block;
+      width: 3em;
+      height: 0.2em;
+      margin: 0.9em;
+      border-right: 2.2em solid #fff;
+      border-left: 0.6em solid #d6d6d6;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+      -moz-transition-property: -moz-transform, margin, border-right-color, box-shadow;
+      transition-property: transform, margin, border-right-color, box-shadow;
+      -webkit-transition-duration: 500ms;
+      -moz-transition-duration: 500ms;
+      transition-duration: 500ms; }
+      .exit-btn .toggle-icon .bar:nth-of-type(1) {
+        margin-left: 1.4em;
+        -webkit-transform: rotate(-137deg) translateY(-1.5em);
+        -moz-transform: rotate(-137deg) translateY(-1.5em);
+        -ms-transform: rotate(-137deg) translateY(-1.5em);
+        -o-transform: rotate(-137deg) translateY(-1.5em);
+        transform: rotate(-137deg) translateY(-1.5em); }
+      .exit-btn .toggle-icon .bar:nth-of-type(2) {
+        margin-left: 0.5em;
+        -webkit-transform: rotate(-42deg);
+        -moz-transform: rotate(-42deg);
+        -ms-transform: rotate(-42deg);
+        -o-transform: rotate(-42deg);
+        transform: rotate(-42deg); }
+  .exit-btn:hover .toggle-icon .bar:nth-of-type(1) {
+    border-right-color: #e9b8b9;
+    box-shadow: 0.4em 0 0.6em 0.1em rgba(205, 40, 44, 0.75); }
+  .exit-btn:hover .toggle-icon .bar:nth-of-type(2) {
+    border-right-color: #ddf1da;
+    box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65); }
 
 /*# sourceMappingURL=sass/maps/style.css.map */

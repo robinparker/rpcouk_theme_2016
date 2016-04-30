@@ -21,7 +21,12 @@ get_header(); ?>
 				<source src="<?php bloginfo( 'template_directory' ); ?>/assets/audio/Star_Wars_original_opening_crawl_1977.mp3" type="audio/mpeg" />
 		</audio>
 
-		<button>Exit Star Wars mode</button>
+		<a href="<?php echo site_url(); ?>" class="exit-btn"><span>Exit Star Wars mode</span>
+			<div class="toggle-icon">
+		    <span class="bar"></span>
+		    <span class="bar"></span>
+		  </div><!-- /toggle-icon -->
+		</a>
 
 		<div class="the-els animation">
 
