@@ -24,7 +24,6 @@ get_header(); ?>
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
 			echo '<div class="row post-summary">';
-
 			?>
 			<div class="post-summary_img">
 				<?php
@@ -34,22 +33,11 @@ get_header(); ?>
 				?>
 			</div>
 			<div class="post-summary_text">
-				<h3><a href="<?php get_permalink() ?>"><?php the_title(); ?></a></h3>
+				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 				<span><?php the_date(); ?></span>
 				<p><?php the_excerpt(); ?></p>
 			</div>
-			<article>
-
-
-			</article>
 			<?php
-			// the_post_thumbnail('large');
-			// the_excerpt();
-		  // echo '<div class="entry-content">';
-		  // the_content();
-			// the_permalink();
-		  // echo '</div>';
-
 			echo '</div>';
 		endwhile;
 		?>

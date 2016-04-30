@@ -6,7 +6,13 @@
     @include outer-container();
     @include mobile-padding();
     header, div {
-      @include span-columns(8);
+      @include span-columns(12);
+      @include media($tablet) {
+        @include span-columns(8);
+        &:not(.entry-meta) {
+          @include shift(2);
+        }
+      }
     }
     header {
       margin-bottom: 1rem;
@@ -14,26 +20,46 @@
     a {
       color: $rp-red;
     }
+    .entry-content {
+      img {
+        border: 1px solid #ddd;
+      }
+    }
   }
 }
 
-.section-heading {
-  margin-bottom: 4rem;
+.page-template-blog {
+  .section-heading {
+    margin-bottom: 2rem;
+    @include media($tablet) {
+      margin-bottom: 4rem;
+    }
+  }
 }
+
 
 .row.post-summary {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: 1rem 0;
   border-bottom: 1px solid #ddd;
   .post-summary_img {
-    @include span-columns(2);
+    display: none;
     img {
-      border-bottom: 1px solid #ddd;
+      border: 1px solid #ddd;
+      margin-bottom: 1rem;
+    }
+    @include media($tablet) {
+      @include span-columns(3);
+    }
+    @include media($desktop-sml) {
+      @include span-columns(2);
     }
   }
   .post-summary_text {
-    @include span-columns(9);
+    @include span-columns(11);
+    @include media($tablet) {
+      @include span-columns(9);
+    }
     h3 {
       margin-top: 0;
       margin-bottom: .5rem;

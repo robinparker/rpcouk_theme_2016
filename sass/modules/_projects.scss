@@ -1,7 +1,10 @@
 .page-template-my-work {
   .projects {
     @include outer-container();
+    margin-top: 3rem;
     .project {
+      position: relative;
+      overflow: hidden;
       @include span-columns(12);
       margin-bottom: 1.5rem;
       @include media($tablet) {
@@ -15,6 +18,8 @@
     }
   }
 }
+
+
 
 body.single {
   .project-heading {
@@ -31,16 +36,39 @@ body.single {
       margin: 0;
       line-height: 1rem;
     }
+    a {
+      float: left;
+      margin-left: 1rem;
+      color: #fff;
+    }
     ul {
-      float: right;
-      margin: 0;
+      float: left;
+      clear: left;
+      margin: 1rem 0 0;
+      padding: 0;
+      width: 100%;
+      @include media($tablet) {
+        float: right;
+        clear: none;
+        margin: 0;
+        width: auto;
+      }
     }
     li {
       list-style-type: none;
       display: inline-block;
+      width: 100%;
       padding-left: 1.75rem;
       margin-right: 1.25rem;
+      margin-bottom: .5rem;
       background: url('assets/imgs/skill-list-check.svg') left center no-repeat;
+      @include media($mobile-lrg) {
+        width: 45%;
+      }
+      @include media($tablet) {
+        width: auto;
+        margin-bottom: 0;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -52,9 +80,25 @@ body.single {
   section {
     @include outer-container();
     .project-description {
-       @include span-columns(8);
-       @include shift(2);
-       margin-top: 3rem;
+       @include span-columns(12);
+       margin-top: 1rem;
+       @include media($tablet) {
+          @include span-columns(8);
+          margin-top: 3rem;
+       }
+    }
+    .project-link {
+       @include span-columns(12);
+       @include media($tablet) {
+         @include span-columns(4);
+       }
+       .ghost-btn {
+         margin-top: 1rem;
+         @include media($tablet) {
+           float: right;
+           margin-top: 4rem;
+         }
+       }
     }
   }
 }

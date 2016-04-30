@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<p>&copy; Robin Parker <?php echo date('Y'); ?></p>
-			<p class="rrf"><span class="rrf-label">Random Robin Fact</span> <span class="rrf-fact"></span></p>
+			<p class="rrf"><span class="rrf-label">Random Robin Fact:</span> <span class="rrf-fact"></span></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

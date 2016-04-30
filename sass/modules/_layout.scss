@@ -37,15 +37,23 @@ body > svg {
     .post-info {
         position: absolute;
         text-align: center;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 100%;
         padding: 2rem;
         background: rgba(0, 0, 0, .6);
         h3 {
-          margin-top: 25%;
+          margin-top: 0;
           color: #fff;
+            font-size: rem(20);
+          @include media($tablet) {
+            margin-top: 10%;
+          }
+          @include media($desktop-lrg) {
+            margin-top: 20%;
+              font-size: rem(24);
+          }
         }
         p {
           color: #fff;
@@ -85,7 +93,7 @@ body > svg {
     color: #fff;
     margin: 0 auto;
     @include media($tablet) {
-      
+
     }
   }
 }

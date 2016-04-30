@@ -18,7 +18,7 @@ if ( $('body').hasClass('page-template-star-wars-mode') ) {
     }
   });
 
-  $('.full-width-3.work, .full-width-3.blog').slick({
+  $('.full-width-3').slick({
     centerMode: true,
     centerPadding: '40px',
     speed: 250,

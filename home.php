@@ -66,16 +66,14 @@ get_header(); ?>
 		$args = array( 'post_type' => 'project', 'posts_per_page' => 3 );
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post();
-			echo '<div><a class="work-three--item fw-3-col" href="' .get_permalink() .'">';
-			?>
-			<?php
+			echo '<a class="fw-3-col project-block" href="' .get_permalink() .'">';
 			the_post_thumbnail();
 			?>
 			<div class="project-info">
 				<h3><?php the_title(); ?></h3>
 				<p>See details</p>
 			</div>
-		</a></div>
+		</a>
 			<?php
 		endwhile;
 
@@ -121,9 +119,10 @@ get_header(); ?>
 		</a>
 	</div>
 
-
 		</main><!-- #main -->
 
+		<!-- twitter card img -->
+		<!-- <img class="twitter-card-home-img" src="<?php bloginfo( 'template_directory' ); ?>/assets/imgs/twitter-card-img-lego.jpg" /> -->
 
 <?php
 get_footer();
