@@ -1,5 +1,13 @@
 $(function() {
 
+if ( $('body').hasClass('page-template-star-wars-mode') ) {
+  console.log('star wars mode');
+  $('.theme').get(0).play();
+  $('.theme').bind('ended', function() {
+    // $('.end-msg').show();
+  });
+}
+
   $('.mobile-menu-toggle').on('click', function() {
     if ( $(this).hasClass('is-active') ) {
       $(this).removeClass('is-active');
