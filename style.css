@@ -1394,7 +1394,8 @@ body.page-template-star-wars-mode {
   left: 25%;
   top: 30%;
   text-align: center;
-  display: none; }
+  display: none;
+  z-index: 999; }
   .end-credits p {
     font-weight: normal; }
   .end-credits a {
