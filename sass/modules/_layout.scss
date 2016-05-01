@@ -44,12 +44,9 @@ body > svg {
         padding: 2rem;
         background: rgba(0, 0, 0, .6);
         h3 {
-          margin-top: 0;
+          margin-top: 10%;
           color: #fff;
-            font-size: rem(20);
-          @include media($tablet) {
-            margin-top: 10%;
-          }
+          font-size: rem(20);
           @include media($desktop-lrg) {
             margin-top: 20%;
               font-size: rem(24);

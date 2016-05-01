@@ -53,7 +53,7 @@ get_header(); ?>
 			</ul>
 			<h4>
 				Availability</h4>
-			<p>I'm available for UI/Front-end Development contract work from June 2016</p>
+			<p>I'm available for UI/Front-end Development contract work from December 2016</p>
 		</aside>
 		</div>
 

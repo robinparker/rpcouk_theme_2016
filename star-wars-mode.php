@@ -22,10 +22,10 @@ get_header(); ?>
 		</audio>
 
 		<a href="<?php echo site_url(); ?>" class="exit-btn"><span>Exit Star Wars mode</span>
-			<div class="toggle-icon">
+			<!-- <div class="toggle-icon">
 		    <span class="bar"></span>
 		    <span class="bar"></span>
-		  </div><!-- /toggle-icon -->
+		  </div> -->
 		</a>
 
 		<div class="the-els animation">
@@ -37,7 +37,7 @@ get_header(); ?>
 				<section class="titles">
 						<div>
 								<p>I’ve been involved in building (and occasionally designing) websites for ten years now, gaining valuable experience with a variety of clients of all shapes and sizes, from small startups to established international brands. The technologies
-										I use day to day include HTML(5), CSS(3) and JavaScript. I also have experience with a variety of other technologies and platforms including LESS, Sass, jQuery, AngularJS, Grunt, SVN, Git, WordPress, Twitter Bootstrap and others.</p>
+										I use day to day include HTML(5), CSS(3) and JavaScript. I also have experience with a variety of other technologies and platforms including LESS, Sass, jQuery, AngularJS, Grunt, Gulp, SVN, Git and others.</p>
 								<p>When I’m not building websites, I’m generally building Lego with my son, or watching Harry Potter movies with my daughter. Or on the rare occasion I get some time to myself I’ll be playing drums in the shed, trying not to annoy the
 										neighbours...</p>
 						</div>
@@ -50,10 +50,13 @@ get_header(); ?>
 						</svg>
 				</section>
 
-				<div class="end-msg">
-					<p>the end. thanks to Tim whatshisface</p>
+				<div class="end-credits">
+					<p>Thanks to <a href="http://timpietrusky.com/star-wars-opening-crawl-from-1977" target="_blank">Tim Pietrusky</a> for his article on how to create the Star Wars crawl in CSS</p>
+					<p><a href="<?php echo site_url(); ?>">Visit my regular homepage</a></p>
 				</div>
 		</div>
+
+
 </article>
 
 
