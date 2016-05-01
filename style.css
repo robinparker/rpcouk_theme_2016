@@ -1394,8 +1394,10 @@ body.page-template-star-wars-mode {
   left: 25%;
   top: 30%;
   text-align: center;
-  display: none;
-  z-index: 999; }
+  opacity: 0;
+  z-index: 999;
+  -webkit-animation: endcredits 1s forwards 94s;
+  animation: endcredits 1s forwards 94s; }
   .end-credits p {
     font-weight: normal; }
   .end-credits a {
@@ -1479,6 +1481,18 @@ body.page-template-star-wars-mode {
   100% {
     top: 20%;
     opacity: 0; } }
+
+@-webkit-keyframes endcredits {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes endcredits {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .exit-btn {
   display: block;
